@@ -6,13 +6,13 @@
   "scripts": {
     "build:graph": "tsx scripts/build-graph.ts",
     "dev": "next dev",
-    "build": "npm run build:graph && next build",
-    "start": "next start",
+    "build": "npm run build:graph && cross-env NODE_ENV=production next build",
+    "start": "npx serve out",
     "lint": "next lint",
     "test": "vitest run"
   },
   "dependencies": {
-    "next": "14.2.5",
+    "next": "14.2.33",
     "react": "18.3.1",
     "react-dom": "18.3.1",
     "react-force-graph-2d": "1.25.5"
@@ -22,6 +22,7 @@
     "@types/react": "18.3.3",
     "@types/react-dom": "18.3.0",
     "autoprefixer": "10.4.19",
+    "cross-env": "^7.0.3",
     "postcss": "8.4.39",
     "tailwindcss": "3.4.6",
     "tsx": "4.16.2",
